@@ -1,4 +1,4 @@
-import Sidebar from "@/components/common/sidebar";
+import Sidebar from "@/components/common/navbar";
 import RootContainerImpl from "./types";
 import ThemeContainer from "./theme";
 
