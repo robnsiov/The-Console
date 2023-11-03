@@ -2,21 +2,18 @@
 import RippleAnim from "@/components/shared/anims/ripple";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Link from "next-intl/link";
+
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
   DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
+import languages from "@/constants/languages";
 
 const Language = () => {
   const [lang, setLang] = useState("en");
@@ -34,20 +31,17 @@ const Language = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" side="bottom" className="w-40">
           <DropdownMenuGroup className="relative">
-            <DropdownMenuItem onClick={() => setLang("en")}>
-              {lang === "en" && (
-                <Badge className="absolute inset-0" variant="secondary" />
-              )}
-              <span className="z-10">English</span>{" "}
-              <DropdownMenuShortcut>us</DropdownMenuShortcut>
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setLang("fa")}>
-              {lang === "fa" && (
-                <Badge className="absolute inset-0" variant="secondary" />
-              )}
-              <span className="z-10">Iran</span>{" "}
-              <DropdownMenuShortcut>fa</DropdownMenuShortcut>
-            </DropdownMenuItem>
+            {languages.map(({ symbol, country }) => (
+              <Link href={"/"} locale={symbol} key={country}>
+                <DropdownMenuItem onClick={() => setLang(symbol)}>
+                  {lang === symbol && (
+                    <Badge className="absolute inset-0" variant="secondary" />
+                  )}
+                  <span className="z-10">{country}</span>{" "}
+                  <DropdownMenuShortcut>{symbol}</DropdownMenuShortcut>
+                </DropdownMenuItem>
+              </Link>
+            ))}
           </DropdownMenuGroup>
         </DropdownMenuContent>
       </DropdownMenu>
