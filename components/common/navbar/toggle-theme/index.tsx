@@ -21,7 +21,7 @@ const ToggleTheme = () => {
           <DropdownMenuTrigger asChild>
             <Button
               className="rounded-full overflow-hidden  relative w-[40px] h-[40px] text-zinc-500"
-              variant="ghost"
+              variant="secondary"
               size="icon"
             >
               <RippleAnim />
