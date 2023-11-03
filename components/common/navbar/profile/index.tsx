@@ -27,8 +27,8 @@ const Profile = () => {
                 <div
                   className={cls(
                     `border-2 border-white outline outline-2 
-      outline-zinc-100 rounded-full overflow-hidden relative duration-200 transition-all active:outline-black`,
-                    { "outline-black": open }
+       rounded-full overflow-hidden relative duration-200 transition-all active:outline-black`,
+                    open ? "outline-black" : "outline-zinc-100"
                   )}
                 >
                   <RippleAnim />
