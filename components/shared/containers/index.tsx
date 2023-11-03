@@ -5,8 +5,10 @@ import ThemeContainer from "./theme";
 const RootContainer = ({ children }: RootContainerImpl) => {
   return (
     <>
-      <ThemeContainer>{children}</ThemeContainer>
-      <Sidebar />
+      <ThemeContainer>
+        <div className="dark:bg-black">{children}</div>
+        <Sidebar />
+      </ThemeContainer>
     </>
   );
 };
