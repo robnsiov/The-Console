@@ -6,7 +6,7 @@ const RootContainer = ({ children }: RootContainerImpl) => {
   return (
     <>
       <ThemeContainer>
-        <div className="dark:bg-black">{children}</div>
+        <div className="min-h-screen dark:bg-zinc-900">{children}</div>
         <Sidebar />
       </ThemeContainer>
     </>
