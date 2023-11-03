@@ -1,6 +1,6 @@
 "use client";
-import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
+import { Moon, Sun1 } from "iconsax-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -20,13 +20,19 @@ const ToggleTheme = () => {
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
-              className="rounded-full  relative"
-              variant="outline"
+              className="rounded-full overflow-hidden  relative w-[40px] h-[40px] text-zinc-500"
+              variant="ghost"
               size="icon"
             >
-              {/* <RippleAnim color="#858" /> */}
-              <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <RippleAnim />
+              <Sun1
+                variant="Bold"
+                className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
+              />
+              <Moon
+                variant="Bold"
+                className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
+              />
               <span className="sr-only">Toggle theme</span>
             </Button>
           </DropdownMenuTrigger>
