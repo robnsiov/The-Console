@@ -23,7 +23,7 @@ const useDebouncedRippleCleanUp = (
   }, [rippleCount, duration, cleanUpFunction]);
 };
 
-const RippleAnim = ({ color = "#d6d6d6", duration = 1000 }: RippleImpl) => {
+const RippleAnim = ({ color = "#a2a2a2", duration = 1000 }: RippleImpl) => {
   const [rippleArray, setRippleArray] = useState<any>([]);
 
   useDebouncedRippleCleanUp(rippleArray.length, duration, () => {
@@ -48,7 +48,11 @@ const RippleAnim = ({ color = "#d6d6d6", duration = 1000 }: RippleImpl) => {
   };
 
   return (
-    <RippleContainer duration={duration} color={color} onMouseDown={addRipple}>
+    <RippleContainer
+      duration={duration}
+      color={color}
+      onPointerDown={addRipple}
+    >
       {rippleArray.length > 0 &&
         rippleArray.map((ripple: any, index: number) => {
           return (
