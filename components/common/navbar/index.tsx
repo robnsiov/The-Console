@@ -1,3 +1,4 @@
+import Language from "./language";
 import Profile from "./profile";
 import Search from "./search";
 import ToggleTheme from "./toggle-theme";
@@ -11,6 +12,7 @@ const Sidebar = () => {
             <Search />
           </div>
           <div className="flex justify-center items-center">
+            <Language />
             <ToggleTheme />
             <Profile />
           </div>
