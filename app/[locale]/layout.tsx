@@ -31,11 +31,14 @@ export default async function RootLayout({
     notFound();
   }
   const lang = languages.find(({ symbol }) => symbol === locale);
+  const dir = lang?.dir ?? "ltr";
   return (
-    <html lang={locale} dir={lang?.dir ?? "ltr"}>
+    <html lang={locale} dir={dir}>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <RootContainer>{children}</RootContainer>
+          <RootContainer locale={locale} dir={dir}>
+            {children}
+          </RootContainer>
         </NextIntlClientProvider>
       </body>
     </html>

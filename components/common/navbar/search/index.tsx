@@ -50,7 +50,7 @@ const Search = () => {
                           href="/"
                         >
                           <CommandItem className="cursor-pointer">
-                            <CalendarIcon className="mr-2 h-4 w-4" />
+                            <CalendarIcon className="me-2 h-4 w-4" />
                             <span>Calendar + {i}</span>
                           </CommandItem>
                         </Link>

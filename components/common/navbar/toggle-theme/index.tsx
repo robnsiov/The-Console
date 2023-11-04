@@ -16,7 +16,7 @@ const ToggleTheme = () => {
 
   return (
     <>
-      <div className="mr-4">
+      <div className="me-4">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button
@@ -37,13 +37,22 @@ const ToggleTheme = () => {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => setTheme("light")}>
+            <DropdownMenuItem
+              className="cursor-pointer"
+              onClick={() => setTheme("light")}
+            >
               Light
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("dark")}>
+            <DropdownMenuItem
+              className="cursor-pointer"
+              onClick={() => setTheme("dark")}
+            >
               Dark
             </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => setTheme("system")}>
+            <DropdownMenuItem
+              className="cursor-pointer"
+              onClick={() => setTheme("system")}
+            >
               System
             </DropdownMenuItem>
           </DropdownMenuContent>

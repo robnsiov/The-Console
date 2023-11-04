@@ -1,0 +1,4 @@
+@function mr-to-me($element) {
+    $element: unquote($element);
+    @return $element: replace("mr", "me");
+}

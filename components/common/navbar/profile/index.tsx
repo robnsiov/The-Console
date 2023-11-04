@@ -19,7 +19,7 @@ const Profile = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
-      <div className="">
+      <div>
         <DropdownMenu open={open} onOpenChange={setOpen}>
           <DropdownMenuTrigger asChild>
             <div className="relative">
@@ -40,7 +40,7 @@ const Profile = () => {
               </ScaleAnim>
             </div>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56">
+          <DropdownMenuContent align="end" side="bottom" className="w-56">
             <DropdownMenuLabel>Robnsiov@gmail.com</DropdownMenuLabel>
             <CardDescription className="px-1.5">Admin</CardDescription>
             <DropdownMenuSeparator />
@@ -51,7 +51,7 @@ const Profile = () => {
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              Log out
+              <span className="w-full">Log out</span>
               <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
             </DropdownMenuItem>
           </DropdownMenuContent>
