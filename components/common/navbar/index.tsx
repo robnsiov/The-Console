@@ -3,7 +3,7 @@ import Profile from "./profile";
 import Search from "./search";
 import ToggleTheme from "./toggle-theme";
 
-const Sidebar = () => {
+const Navbar = () => {
   return (
     <>
       <div className="fixed right-0 left-[280px] top-0 h-[80px] rtl:left-0 rtl:right-[280px]">
@@ -21,4 +21,4 @@ const Sidebar = () => {
     </>
   );
 };
-export default Sidebar;
+export default Navbar;
