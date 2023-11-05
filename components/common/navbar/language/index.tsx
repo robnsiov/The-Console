@@ -2,7 +2,6 @@
 import RippleAnim from "@/components/shared/anims/ripple";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Link from "next-intl/link";
 
 import {
   DropdownMenu,
@@ -16,6 +15,7 @@ import { useEffect, useState } from "react";
 import languages from "@/constants/languages";
 import { useAtom } from "jotai";
 import appConfigsAtom from "@/context/atoms/app-configs";
+import Link from "@/components/shared/link";
 
 const Language = () => {
   const [appConfigs] = useAtom(appConfigsAtom);

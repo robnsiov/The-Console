@@ -13,9 +13,9 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import RippleAnim from "@/components/shared/anims/ripple";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
 import { useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import Link from "@/components/shared/link";
 
 const Search = () => {
   const [open, setOpen] = useState(false);
