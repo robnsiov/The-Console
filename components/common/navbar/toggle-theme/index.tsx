@@ -12,7 +12,7 @@ import {
 import RippleAnim from "@/components/shared/anims/ripple";
 
 const ToggleTheme = () => {
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <>
@@ -39,23 +39,31 @@ const ToggleTheme = () => {
             </div>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem
-              className="cursor-pointer"
-              onClick={() => setTheme("light")}
-            >
-              Light
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className="cursor-pointer"
-              onClick={() => setTheme("dark")}
-            >
-              Dark
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              className="cursor-pointer"
-              onClick={() => setTheme("system")}
-            >
-              System
+            <DropdownMenuItem className="flex justify-start items-start flex-col p-0 !bg-inherit">
+              <Button
+                forceActive={theme === "light"}
+                variant="ghost"
+                className="cursor-pointer w-full flex justify-start items-center px-2"
+                onClick={() => setTheme("light")}
+              >
+                Light
+              </Button>
+              <Button
+                forceActive={theme === "dark"}
+                variant="ghost"
+                className="cursor-pointer w-full flex justify-start items-center px-2"
+                onClick={() => setTheme("dark")}
+              >
+                Dark
+              </Button>
+              <Button
+                forceActive={theme === "system"}
+                variant="ghost"
+                className="cursor-pointer w-full flex justify-start items-center px-2"
+                onClick={() => setTheme("system")}
+              >
+                system
+              </Button>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
