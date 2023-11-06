@@ -1,6 +1,6 @@
 "use client";
 import RippleAnim from "@/components/shared/anims/ripple";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/shared/button";
 import { ArrowLeft2 } from "iconsax-react";
 import useSidebarToggle from "./use";
 

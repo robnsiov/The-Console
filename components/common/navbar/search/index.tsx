@@ -1,6 +1,6 @@
 "use client";
 import { SearchNormal1 } from "iconsax-react";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/shared/button";
 import {
   Command,
   CommandEmpty,

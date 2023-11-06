@@ -1,7 +1,7 @@
 "use client";
 
 import RippleAnim from "@/components/shared/anims/ripple";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/shared/button";
 import useToggleSidebar from "./use";
 
 const ToggleSidebar = () => {

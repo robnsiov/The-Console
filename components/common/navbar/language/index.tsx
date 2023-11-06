@@ -1,8 +1,7 @@
 "use client";
 import RippleAnim from "@/components/shared/anims/ripple";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
+import Button from "@/components/shared/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -27,28 +26,36 @@ const Language = () => {
     <div className="flex justify-center items-center me-4">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button
-            variant="secondary"
-            className="rounded-full relative w-[40px] h-[40px] overflow-hidden"
-          >
-            {lang}
-            <RippleAnim />
-          </Button>
+          <div>
+            <Button
+              variant="secondary"
+              className="rounded-full relative w-[40px] h-[40px] overflow-hidden"
+            >
+              {lang}
+              <RippleAnim />
+            </Button>
+          </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-40">
           <DropdownMenuGroup className="relative">
             {languages.map(({ symbol, country }) => (
-              <Link href={"/"} locale={symbol} key={country}>
-                <DropdownMenuItem
-                  className="cursor-pointer"
+              <Link
+                href={"/"}
+                locale={symbol}
+                key={country}
+                className="w-full inline-block"
+              >
+                <Button
+                  variant="ghost"
+                  className="cursor-pointer w-full felx justify-between items-center px-2"
+                  forceActive={lang === symbol}
                   onClick={() => setLang(symbol)}
                 >
-                  {lang === symbol && (
-                    <Badge className="absolute inset-0" variant="secondary" />
-                  )}
-                  <span className="z-10 w-full">{country}</span>{" "}
-                  <DropdownMenuShortcut>{symbol}</DropdownMenuShortcut>
-                </DropdownMenuItem>
+                  <span>{country}</span>{" "}
+                  <DropdownMenuShortcut className="ml-[unset]">
+                    {symbol}
+                  </DropdownMenuShortcut>
+                </Button>
               </Link>
             ))}
           </DropdownMenuGroup>

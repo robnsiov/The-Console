@@ -1,3 +1,4 @@
+"use client";
 import Language from "./language";
 import Profile from "./profile";
 import Search from "./search";

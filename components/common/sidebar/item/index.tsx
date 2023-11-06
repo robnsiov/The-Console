@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import SidebarItemImpl from "./types";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight2 } from "iconsax-react";
@@ -16,6 +15,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Bullet from "@/components/shared/bullet";
 import Link from "@/components/shared/link";
+import Button from "@/components/shared/button";
 
 const SidebarItem = ({
   href,
@@ -37,6 +37,7 @@ const SidebarItem = ({
             <div className="w-full">
               <Link className="w-full mb-1" href={href}>
                 <Button
+                  active={href}
                   onClick={() => setOpen(!open)}
                   asChild
                   className={cls(
@@ -129,6 +130,7 @@ const SidebarItem = ({
                   {subs?.map(({ href, title }) => (
                     <Link href={href} className="w-full" key={href + title}>
                       <Button
+                        active={href}
                         asChild
                         className="w-full overflow-hidden relative flex justify-start items-center py-3"
                         variant="ghost"
