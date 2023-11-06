@@ -15,6 +15,9 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useState } from "react";
+import { Logout } from "iconsax-react";
+import Link from "@/components/shared/link";
+import Button from "@/components/shared/button";
 const Profile = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -28,7 +31,9 @@ const Profile = () => {
                   className={cls(
                     `border-2 border-white outline outline-2 
        rounded-full overflow-hidden relative duration-200 transition-all active:outline-black`,
-                    open ? "outline-black" : "outline-zinc-100"
+                    open
+                      ? "outline-black dark:outline-zinc-950"
+                      : "outline-zinc-100 dark:outline-zinc-950"
                   )}
                 >
                   <RippleAnim />
@@ -45,14 +50,36 @@ const Profile = () => {
             <CardDescription className="px-1.5">Admin</CardDescription>
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
-              <DropdownMenuItem>Home</DropdownMenuItem>
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuItem className="w-full flex justify-start flex-col items-center p-0 !bg-inherit">
+                <Button
+                  active={"/"}
+                  className="w-full flex justify-start items-center px-2"
+                  variant="ghost"
+                >
+                  <Link href="/">Home</Link>
+                </Button>
+                <Button
+                  active={"/profile"}
+                  className="w-full flex justify-start items-center px-2 my-1"
+                  variant="ghost"
+                >
+                  <Link href="/profile">Profile</Link>
+                </Button>
+                <Button
+                  active={"/settings"}
+                  className="w-full flex justify-start items-center px-2"
+                  variant="ghost"
+                >
+                  <Link href="/settings">Settings</Link>
+                </Button>
+              </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem className="cursor-pointer">
               <span className="w-full">Log out</span>
-              <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+              <DropdownMenuShortcut>
+                <Logout />
+              </DropdownMenuShortcut>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

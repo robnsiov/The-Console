@@ -21,7 +21,7 @@ const ToggleTheme = () => {
           <DropdownMenuTrigger asChild>
             <div className="w-full">
               <Button
-                className="rounded-full overflow-hidden  relative w-[40px] h-[40px] text-zinc-500"
+                className="rounded-full overflow-hidden  relative w-[40px] h-[40px]"
                 variant="secondary"
                 size="icon"
               >
@@ -51,7 +51,7 @@ const ToggleTheme = () => {
               <Button
                 forceActive={theme === "dark"}
                 variant="ghost"
-                className="cursor-pointer w-full flex justify-start items-center px-2"
+                className="cursor-pointer w-full flex justify-start items-center px-2 my-1"
                 onClick={() => setTheme("dark")}
               >
                 Dark

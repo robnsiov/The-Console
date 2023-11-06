@@ -43,7 +43,7 @@ const Language = () => {
                 href={"/"}
                 locale={symbol}
                 key={country}
-                className="w-full inline-block"
+                className="w-full inline-block mb-1 last:mb-0"
               >
                 <Button
                   variant="ghost"
