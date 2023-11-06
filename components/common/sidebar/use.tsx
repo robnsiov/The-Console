@@ -5,10 +5,15 @@ import { useViewportSize } from "@mantine/hooks";
 const useSidebar = () => {
   const [sidebarStatus, setSidebarStatus] = useAtom(sidebarStatusAtom);
   const { width } = useViewportSize();
-  console.log(width);
+  const toggleOpen = (open: boolean) => {
+    setSidebarStatus({ ...sidebarStatus, open });
+  };
+
   return {
     setSidebarStatus,
-    minimumSidebar: !sidebarStatus.open && width > 1023,
+    minimumSidebar: sidebarStatus.minimum && width > 1023,
+    sidebarStatus,
+    toggleOpen,
   };
 };
 export default useSidebar;

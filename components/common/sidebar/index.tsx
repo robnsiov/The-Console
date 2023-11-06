@@ -10,16 +10,24 @@ import cls from "classnames";
 import Link from "@/components/shared/link";
 
 const Sidebar = () => {
-  const { setSidebarStatus, minimumSidebar } = useSidebar();
+  const { toggleOpen, minimumSidebar, sidebarStatus } = useSidebar();
   return (
     <>
-      {" "}
+      <div
+        onClick={() => toggleOpen(false)}
+        className={cls(
+          `fixed inset-0 bg-white/80 backdrop-blur z-[48] transition-all duration-200 dark:bg-slate-950/80`,
+          sidebarStatus.open ? "opacity-100 visible" : "opacity-0 invisible"
+        )}
+      ></div>
       <div
         className={cls(
           `w-[280px] fixed inset-y-0 left-0 border-r-[1px]
       border-dashed border-gray-200 rtl:left-auto rtl:right-0
-      rtl:border-r-0 rtl:border-l-[1px]`,
-          { "w-[80px]": minimumSidebar }
+      rtl:border-r-0 rtl:border-l-[1px] lg:left-[-291px] lg:rtl:left-auto lg:rtl:right-[-291px]
+       bg-white dark:bg-zinc-900 z-[49] transition-transform duration-300`,
+          { "w-[80px]": minimumSidebar },
+          { "translate-x-[291px] rtl:translate-x-[-291px]": sidebarStatus.open }
         )}
       >
         <SidebarToggle />

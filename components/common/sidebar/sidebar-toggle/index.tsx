@@ -12,10 +12,15 @@ const SidebarToggle = () => {
         className="absolute top-[50px] right-[-11px] w-[22px] h-[22px] 
         rounded-full bg-white dark:bg-zinc-900 border-[1px]
       border-dashed border-gray-200 z-10 overflow-hidden
-      rtl:right-auto rtl:left-[-11px]"
+      rtl:right-auto rtl:left-[-11px] lg:hidden"
       >
         <Button
-          onClick={() => setSidebarStatus({ open: !sidebarStatus.open })}
+          onClick={() =>
+            setSidebarStatus({
+              ...sidebarStatus,
+              minimum: !sidebarStatus.minimum,
+            })
+          }
           className="flex justify-center items-center p-0 h-full w-full rounded relative"
           variant="ghost"
         >
