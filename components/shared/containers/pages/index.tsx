@@ -1,4 +1,5 @@
 "use client";
+import Footer from "@/components/common/footer";
 import PagesContainerImpl from "./types";
 import usePageContainer from "./use";
 import cls from "classnames";
@@ -18,6 +19,7 @@ const PagesContainer = ({ children }: PagesContainerImpl) => {
         >
           {children} 00
         </div>
+        <Footer />
       </div>
     </>
   );
