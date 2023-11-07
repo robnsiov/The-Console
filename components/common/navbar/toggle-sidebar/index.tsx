@@ -12,7 +12,7 @@ const ToggleSidebar = () => {
         onClick={toggleSidebar}
         size="icon"
         variant="ghost"
-        className="relative overflow-hidden me-2 rounded-full hidden lg:inline-block"
+        className="relative overflow-hidden me-2 md:me-1 rounded-full hidden lg:inline-block"
       >
         <RippleAnim />
         <div className="w-full p-2.5 flex justify-center items-center flex-col">

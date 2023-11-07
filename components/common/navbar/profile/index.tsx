@@ -75,11 +75,16 @@ const Profile = () => {
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="cursor-pointer">
-              <span className="w-full">Log out</span>
-              <DropdownMenuShortcut>
-                <Logout />
-              </DropdownMenuShortcut>
+            <DropdownMenuItem className="cursor-pointer !bg-inherit p-0">
+              <Button
+                className="w-full felx justify-between items-center px-2"
+                variant="ghost"
+              >
+                <span>Log out</span>
+                <DropdownMenuShortcut>
+                  <Logout />
+                </DropdownMenuShortcut>
+              </Button>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

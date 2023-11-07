@@ -23,7 +23,7 @@ const Language = () => {
     if (appConfigs.locale) setLang(appConfigs.locale);
   }, [appConfigs.locale]);
   return (
-    <div className="flex justify-center items-center me-4">
+    <div className="flex justify-center items-center me-4 md:me-2">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <div>

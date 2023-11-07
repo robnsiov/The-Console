@@ -24,14 +24,16 @@ const Search = () => {
       <div className="flex justify-center items-center">
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button
-              variant="ghost"
-              className="rounded-full overflow-hidden relative"
-              size="icon"
-            >
-              <SearchNormal1 size="18" />
-              <RippleAnim />
-            </Button>
+            <div>
+              <Button
+                variant="ghost"
+                className="rounded-full overflow-hidden relative"
+                size="icon"
+              >
+                <SearchNormal1 size="18" />
+                <RippleAnim />
+              </Button>
+            </div>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <Command className="mt-3">

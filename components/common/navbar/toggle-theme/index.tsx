@@ -16,7 +16,7 @@ const ToggleTheme = () => {
 
   return (
     <>
-      <div className="me-4">
+      <div className="me-4 md:me-2">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div className="w-full">

@@ -8,7 +8,7 @@ const Button = (props: any) => {
   if (pathname === props.active || props.forceActive) {
     attrs.variant = "secondary";
   }
-  console.log(pathname, props.active);
+  delete attrs.forceActive;
   return (
     <>
       <ShadButton {...attrs} />
