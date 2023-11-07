@@ -19,7 +19,7 @@ const Navbar = () => {
           { "ltr:left-[80px] rtl:right-[80px]": sidebarStatus.minimum }
         )}
       >
-        <div className="h-full w-full bg-white dark:bg-zinc-900 backdrop-blur-md flex justify-between items-center p-4 md:p-2">
+        <div className="h-full w-full bg-white dark:bg-zinc-900 backdrop-blur-md flex justify-between items-center p-4 lg:p-2">
           <div className="flex justify-start items-center">
             <ToggleSidebar />
             <Search />

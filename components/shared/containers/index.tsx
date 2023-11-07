@@ -5,6 +5,7 @@ import ThemeContainer from "./theme";
 import RadixUiContainer from "./radix-ui";
 import useRootContainer from "./use";
 import Sidebar from "@/components/common/sidebar";
+import PagesContainer from "./pages";
 
 const RootContainer = ({ children, dir, locale }: RootContainerImpl) => {
   useRootContainer({ dir, locale });
@@ -14,7 +15,7 @@ const RootContainer = ({ children, dir, locale }: RootContainerImpl) => {
         <ThemeContainer>
           <Navbar />
           <Sidebar />
-          <div className="min-h-screen dark:bg-zinc-900">{children}</div>
+          <PagesContainer>{children}</PagesContainer>
         </ThemeContainer>
       </RadixUiContainer>
     </>
