@@ -17,7 +17,7 @@ const PagesContainer = ({ children }: PagesContainerImpl) => {
             { "w-[calc(100%-80px)]": minimumSidebar }
           )}
         >
-          {children} 00
+          {children}
         </div>
         <Footer />
       </div>

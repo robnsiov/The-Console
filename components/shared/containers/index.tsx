@@ -10,9 +10,7 @@ const RootContainer = ({ children, dir, locale }: RootContainerImpl) => {
   return (
     <>
       <RadixUiContainer dir={dir}>
-        <ThemeContainer>
-          <PagesContainer>{children}</PagesContainer>
-        </ThemeContainer>
+        <ThemeContainer>{children}</ThemeContainer>
       </RadixUiContainer>
     </>
   );
