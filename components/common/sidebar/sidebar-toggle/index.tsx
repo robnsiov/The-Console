@@ -9,7 +9,7 @@ const SidebarToggle = () => {
   return (
     <>
       <div
-        className="absolute top-[50px] right-[-11px] w-[22px] h-[22px] 
+        className="absolute top-[64px] right-[-11px] w-[22px] h-[22px] 
         rounded-full bg-white dark:bg-zinc-900 border-[1px]
       border-dashed border-gray-200 z-10 overflow-hidden
       rtl:right-auto rtl:left-[-11px] lg:hidden"

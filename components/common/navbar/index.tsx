@@ -1,4 +1,5 @@
 "use client";
+import { Separator } from "@/components/ui/separator";
 import Language from "./language";
 import Profile from "./profile";
 import Search from "./search";
@@ -14,7 +15,7 @@ const Navbar = () => {
       <div
         className={cls(
           `fixed right-0 left-[280px] top-0 rtl:left-0 rtl:right-[280px]
-      lg:!right-0 lg:!left-0`,
+      lg:!right-0 lg:!left-0 flex justify-start items-start flex-col`,
           { "ltr:left-[80px] rtl:right-[80px]": sidebarStatus.minimum }
         )}
       >
@@ -29,6 +30,7 @@ const Navbar = () => {
             <Profile />
           </div>
         </div>
+        <Separator className="opacity-70" />
       </div>
     </>
   );
