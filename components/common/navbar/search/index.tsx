@@ -16,9 +16,10 @@ import { CalendarIcon } from "@radix-ui/react-icons";
 import { useState } from "react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Link from "@/components/shared/link";
+import useSearch from "./use";
 
 const Search = () => {
-  const [open, setOpen] = useState(false);
+  const { open, setOpen } = useSearch();
   return (
     <>
       <div className="flex justify-center items-center">
