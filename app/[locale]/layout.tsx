@@ -31,7 +31,7 @@ export default async function RootLayout({
     notFound();
   }
   const lang = languages.find(({ symbol }) => symbol === locale);
-  const dir = lang?.dir ?? "ltr";
+  const dir: any = lang?.dir ?? "ltr";
   return (
     <html lang={locale} dir={dir}>
       <body className={inter.className}>
