@@ -5,6 +5,15 @@ import { CardDescription, CardTitle } from "@/components/ui/card";
 import Input from "@/components/shared/input";
 import { Separator } from "@/components/ui/separator";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const SignUp = () => {
   return (
@@ -54,13 +63,61 @@ const SignUp = () => {
         </div>
         <CardDescription className="text-center mt-6 px-8">
           By clicking continue, you agree to our{" "}
-          <Button variant="link" asChild className="p-0 inline-block">
-            <span className="cursor-pointer">Terms of Service</span>
-          </Button>{" "}
+          <Dialog>
+            <DialogTrigger asChild>
+              <div className="inline-block">
+                <Button variant="link" asChild className="p-0 inline-block">
+                  <span className="cursor-pointer me-1">Terms of service</span>
+                </Button>{" "}
+              </div>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle className="mb-2 mt-6">Edit profile</DialogTitle>
+                <DialogDescription>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                  dolor in hendrerit in vulputate velit esse molestie consequat,
+                  vel illum dolore eu feugiat nulla facilisis at vero eros et
+                  accumsan et iusto odio dignissim qui blandit praesent luptatum
+                  zzril delenit augue duis dolore te feugait nulla facilisi.{" "}
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
           and
-          <Button variant="link" asChild className="ms-1 p-0 inline-block">
-            <span className="cursor-pointer"> Privacy Policy.</span>
-          </Button>{" "}
+          <Dialog>
+            <DialogTrigger asChild>
+              <div className="inline-block">
+                <Button
+                  variant="link"
+                  asChild
+                  className="ms-1 p-0 inline-block"
+                >
+                  <span className="cursor-pointer"> Privacy Policy.</span>
+                </Button>{" "}
+              </div>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle className="mb-2 mt-6">Edit profile</DialogTitle>
+                <DialogDescription>
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                  diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                  aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                  nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                  aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                  dolor in hendrerit in vulputate velit esse molestie consequat,
+                  vel illum dolore eu feugiat nulla facilisis at vero eros et
+                  accumsan et iusto odio dignissim qui blandit praesent luptatum
+                  zzril delenit augue duis dolore te feugait nulla facilisi.{" "}
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
         </CardDescription>
       </div>
     </>
