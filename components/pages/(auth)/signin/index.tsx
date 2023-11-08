@@ -1,12 +1,14 @@
 "use client";
 
 import Button from "@/components/shared/button";
+import Input from "@/components/shared/input";
 import { CardDescription, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+import useSignin from "./use";
 
 const SignIn = () => {
+  const { errors, handleSubmit, onSubmit, register } = useSignin();
   return (
     <>
       <div className="flex justify-center items-center flex-col w-full max-w-xs">
@@ -16,16 +18,26 @@ const SignIn = () => {
         <CardDescription className="mt-2">
           Enter your email below to sign in your account
         </CardDescription>
-        <form className="flex justify-center items-center flex-col mt-6 w-full">
-          <Input placeholder="jack@gmail.com" autoComplete="email" />
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex justify-center items-center flex-col mt-6 w-full"
+        >
+          <Input
+            error={errors.email?.message}
+            {...register("email")}
+            placeholder="jack@gmail.com"
+            autoComplete="email"
+          />
           <Input
             autoComplete="current-password"
             placeholder="password"
-            className="my-1.5"
+            container="mt-1.5"
             type="password"
+            error={errors.password?.message}
+            {...register("password")}
           />
 
-          <Button type="submit" className="w-full">
+          <Button type="submit" className="w-full mt-1.5">
             Sign In with Email
           </Button>
         </form>

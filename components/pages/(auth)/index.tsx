@@ -31,7 +31,7 @@ const Authentication = () => {
               variant="ghost"
               onClick={toggleActiveForm}
             >
-              {activeForm}
+              {activeForm === "Sign in" ? "Sign up" : "Sign in"}
             </Button>
             <div className="w-1/2 lg:w-full flex justify-center items-center md:p-4">
               {activeForm === "Sign in" && <SignIn />}

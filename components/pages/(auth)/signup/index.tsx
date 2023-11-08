@@ -2,7 +2,7 @@
 
 import Button from "@/components/shared/button";
 import { CardDescription, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
+import Input from "@/components/shared/input";
 import { Separator } from "@/components/ui/separator";
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
