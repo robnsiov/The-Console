@@ -14,7 +14,7 @@ const PagesContainer = ({ children }: PagesContainerImpl) => {
             `lg:w-full w-[calc(100%-280px)] mt-[76px] 
             min-h-[calc(100vh-76px)] lg:mt-[59px] lg:min-h-[calc(100vh-52px)]
             p-4 lg:p-2`,
-            { "w-[calc(100%-80px)]": minimumSidebar }
+            { "w-[calc(100%-92px)]": minimumSidebar }
           )}
         >
           {children}

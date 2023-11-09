@@ -16,7 +16,7 @@ const Navbar = () => {
         className={cls(
           `fixed right-0 left-[280px] top-0 rtl:left-0 rtl:right-[280px]
       lg:!right-0 lg:!left-0 flex justify-start items-start flex-col`,
-          { "ltr:left-[80px] rtl:right-[80px]": sidebarStatus.minimum }
+          { "ltr:left-[92px] rtl:right-[92px]": sidebarStatus.minimum }
         )}
       >
         <div className="h-full w-full bg-white dark:bg-zinc-900 backdrop-blur-md flex justify-between items-center p-4 lg:p-2">
