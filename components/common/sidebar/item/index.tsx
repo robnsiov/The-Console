@@ -35,7 +35,7 @@ const SidebarItem = ({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div className="w-full">
-              <Link className="w-full mb-1" href={href}>
+              <Link className="w-full mb-1 inline-block" href={href}>
                 <Button
                   active={href}
                   onClick={() => setOpen(!open)}
@@ -83,7 +83,10 @@ const SidebarItem = ({
                             "rotate-90 rtl:-rotate-90 ":
                               open && !minimumSidebar,
                           },
-                          { "translate-x-1 rtl:-translate-x-1": minimumSidebar }
+                          {
+                            "translate-x-0.5 rtl:-translate-x-0.5":
+                              minimumSidebar,
+                          }
                         )}
                       />
                     )}
@@ -137,7 +140,7 @@ const SidebarItem = ({
                       >
                         <div className="w-full">
                           <Bullet />
-                          <span className="ms-3">{title}</span>
+                          <span className="ms-3 opacity-70">{title}</span>
                           <RippleAnim />
                         </div>
                       </Button>

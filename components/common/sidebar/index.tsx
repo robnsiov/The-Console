@@ -26,12 +26,16 @@ const Sidebar = () => {
       border-dashed border-gray-200 rtl:left-auto rtl:right-0
       rtl:border-r-0 rtl:border-l-[1px] lg:left-[-291px] lg:rtl:left-auto lg:rtl:right-[-291px]
        bg-white dark:bg-zinc-900 z-[49] transition-transform duration-300`,
-          { "w-[80px]": minimumSidebar },
+          { "w-[92px]": minimumSidebar },
           { "translate-x-[291px] rtl:translate-x-[-291px]": sidebarStatus.open }
         )}
       >
         <SidebarToggle />
-        <ScrollArea className="w-full h-full">
+        <ScrollArea
+          scrollHideDelay={400}
+          type="scroll"
+          className="w-full h-full"
+        >
           <div
             className={cls(`p-3 flex justify-start items-start flex-col`, {
               "px-1": minimumSidebar,
@@ -46,7 +50,7 @@ const Sidebar = () => {
                 className="w-full flex justify-start items-start flex-col"
               >
                 {!minimumSidebar && (
-                  <h2 className="text-xs ms-4 font-extrabold uppercase my-2">
+                  <h2 className="text-xs ms-4 font-extrabold uppercase my-2 opacity-40">
                     {mainTitle}
                   </h2>
                 )}
